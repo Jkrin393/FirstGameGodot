@@ -1,0 +1,80 @@
+[gd_scene load_steps=10 format=3 uid="uid://chbu2tc1luhbg"]
+
+[ext_resource type="Script" path="res://Collectables/cherry.gd" id="1_op7e8"]
+[ext_resource type="Texture2D" uid="uid://fvyuq31617vq" path="res://Pickups/Cheery/cherry.png" id="1_xbow7"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_evpb4"]
+radius = 13.0384
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n7emr"]
+atlas = ExtResource("1_xbow7")
+region = Rect2(0, 0, 21, 21)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xv6r3"]
+atlas = ExtResource("1_xbow7")
+region = Rect2(21, 0, 21, 21)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_olge1"]
+atlas = ExtResource("1_xbow7")
+region = Rect2(42, 0, 21, 21)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tqtbe"]
+atlas = ExtResource("1_xbow7")
+region = Rect2(63, 0, 21, 21)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l6vf8"]
+atlas = ExtResource("1_xbow7")
+region = Rect2(84, 0, 21, 21)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lh5nb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n7emr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xv6r3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_olge1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tqtbe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l6vf8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l6vf8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tqtbe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_olge1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xv6r3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n7emr")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[node name="Cherry" type="Area2D"]
+script = ExtResource("1_op7e8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_evpb4")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_lh5nb")
+animation = &"idle"
+autoplay = "idle"
+frame = 6
+frame_progress = 0.757428
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

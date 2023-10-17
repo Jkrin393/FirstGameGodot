@@ -1,0 +1,134 @@
+[gd_scene load_steps=13 format=3 uid="uid://du1p2ol6bmhes"]
+
+[ext_resource type="Script" path="res://bg.gd" id="1_d6p01"]
+[ext_resource type="Texture2D" uid="uid://d3inn0asxct2u" path="res://World/Background/back.png" id="1_orlq2"]
+[ext_resource type="Texture2D" uid="uid://bfy6bt02nkhhn" path="res://World/Background/middle.png" id="2_sk2de"]
+[ext_resource type="Texture2D" uid="uid://u8njnqqhpr35" path="res://World/Props/house.png" id="3_drfay"]
+[ext_resource type="Texture2D" uid="uid://6meqtn3koxto" path="res://World/Props/palm.png" id="4_mj1jx"]
+[ext_resource type="Texture2D" uid="uid://dush7v564yki5" path="res://World/Props/pine.png" id="5_t7ntv"]
+[ext_resource type="Texture2D" uid="uid://di0twtpivroap" path="res://World/Props/rock-1.png" id="6_iwvdp"]
+[ext_resource type="Texture2D" uid="uid://df413lp6aewn" path="res://World/Props/plant-house.png" id="7_a5y3j"]
+[ext_resource type="Texture2D" uid="uid://dt4vwaoalnscf" path="res://World/Props/tree-house.png" id="8_ebdvf"]
+[ext_resource type="Texture2D" uid="uid://ir60m5rank5o" path="res://World/Props/wooden-house.png" id="9_4g0cf"]
+[ext_resource type="Texture2D" uid="uid://hiegaj6qjvel" path="res://World/Props/bush.png" id="10_hkmf7"]
+[ext_resource type="Texture2D" uid="uid://btnxk35ilkghx" path="res://World/Props/big-crate.png" id="11_qvu4p"]
+
+[node name="BG" type="ParallaxBackground"]
+script = ExtResource("1_d6p01")
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Back" type="Sprite2D" parent="ParallaxLayer"]
+position = Vector2(576, 324)
+scale = Vector2(3, 2.7)
+texture = ExtResource("1_orlq2")
+
+[node name="House" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.8, 0.8)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="House" type="Sprite2D" parent="House"]
+position = Vector2(32, 336)
+texture = ExtResource("3_drfay")
+
+[node name="Palm" type="Sprite2D" parent="House"]
+position = Vector2(80, 336)
+texture = ExtResource("4_mj1jx")
+
+[node name="House2" type="Sprite2D" parent="House"]
+position = Vector2(32, 336)
+texture = ExtResource("3_drfay")
+
+[node name="Palm2" type="Sprite2D" parent="House"]
+position = Vector2(80, 336)
+texture = ExtResource("4_mj1jx")
+
+[node name="House3" type="Sprite2D" parent="House"]
+position = Vector2(208, 320)
+texture = ExtResource("3_drfay")
+
+[node name="Palm3" type="Sprite2D" parent="House"]
+position = Vector2(240, 280)
+texture = ExtResource("4_mj1jx")
+
+[node name="Rock-1" type="Sprite2D" parent="House"]
+position = Vector2(160, 352)
+texture = ExtResource("6_iwvdp")
+
+[node name="Plant-house" type="Sprite2D" parent="House"]
+position = Vector2(360, 344)
+scale = Vector2(1, 1)
+texture = ExtResource("7_a5y3j")
+
+[node name="Pine" type="Sprite2D" parent="House"]
+position = Vector2(408, 304.5)
+scale = Vector2(1, 1.36154)
+texture = ExtResource("5_t7ntv")
+
+[node name="Pine2" type="Sprite2D" parent="House"]
+position = Vector2(328, 304)
+scale = Vector2(1, 1.36154)
+texture = ExtResource("5_t7ntv")
+
+[node name="Tree-house" type="Sprite2D" parent="House"]
+position = Vector2(528, 278)
+scale = Vector2(1, 1.02778)
+texture = ExtResource("8_ebdvf")
+
+[node name="Wooden-house" type="Sprite2D" parent="House"]
+position = Vector2(528, 360)
+texture = ExtResource("9_4g0cf")
+
+[node name="Plant-house2" type="Sprite2D" parent="House"]
+position = Vector2(704, 344)
+texture = ExtResource("7_a5y3j")
+
+[node name="Bush" type="Sprite2D" parent="House"]
+position = Vector2(856, 352)
+scale = Vector2(1.54348, 2.5)
+texture = ExtResource("10_hkmf7")
+
+[node name="Big-crate" type="Sprite2D" parent="House"]
+position = Vector2(888, 376)
+scale = Vector2(1.5, 1.25)
+texture = ExtResource("11_qvu4p")
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.7, 0.7)
+motion_mirroring = Vector2(1224, 0)
+
+[node name="Middle" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(88, 464)
+texture = ExtResource("2_sk2de")
+metadata/_edit_lock_ = true
+
+[node name="Middle2" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(440, 464)
+texture = ExtResource("2_sk2de")
+metadata/_edit_lock_ = true
+
+[node name="Middle3" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(264, 464)
+texture = ExtResource("2_sk2de")
+metadata/_edit_lock_ = true
+
+[node name="Middle4" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(616, 464)
+texture = ExtResource("2_sk2de")
+metadata/_edit_lock_ = true
+
+[node name="Middle5" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(968, 464)
+texture = ExtResource("2_sk2de")
+metadata/_edit_lock_ = true
+
+[node name="Middle7" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(1144, 464)
+texture = ExtResource("2_sk2de")
+metadata/_edit_lock_ = true
+
+[node name="Middle6" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(792, 464)
+texture = ExtResource("2_sk2de")
+metadata/_edit_lock_ = true
